@@ -1,0 +1,15 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Card
+
+@{
+}
+
+<div>Your card is @Model.ToString()</div>
+
+
+<form asp-controller="home" asp-action="DealANewCard" method="get">
+
+    <input type="submit" value="Deal A New Card" />
+</form>
