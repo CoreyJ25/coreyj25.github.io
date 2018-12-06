@@ -10,17 +10,28 @@ namespace PersonalProject.Controllers
 {
     public class HomeController : Controller
     {
-        public Deck MyDeck { get; }
+       
 
         public HomeController()
         {
-            MyDeck = new Deck();
+            
         }
-        public IActionResult DealANewCard()
-        {
-            Card newCard = MyDeck.DealOne();
-            return View(newCard);
-        }
+        //public IActionResult DealANewCard()
+        //{
+        //    //if(gameState == null)
+        //    //{
+        //    //    gameState = new TableModel();
+        //    //}
+
+        //    gameState.aCard = gameState.MyDeck.DealOne();
+        //    gameState.DiscardPile.AddCardToBottom(gameState.aCard);
+        //    return View(gameState);
+        //}
+
+        
+
+
+
         public IActionResult Index()
         {
             

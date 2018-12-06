@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model TableModel
+
+
+
+
+@{ 
+    foreach(Player blackjackPlayer in Model.Players)
+    {
+        <div>@blackjackPlayer.Name 's Hand</div>
+        <ul>
+            @{
+                foreach (Card card in blackjackPlayer.Hand)
+                {
+                    <li>@card.ToString()</li>
+                }
+            }
+
+        </ul>
+    }
+}
+<div></div>
+
+
+<form asp-controller="BlackJack" asp-action="DealANewCard" method="get">
+
+    <input type="submit" value="Deal A Round" />
+</form>
